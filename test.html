@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: rgb(40, 40, 40);
+    }
+
+    div.container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+
+    /* button {
+      cursor: pointer;
+      margin: 10px;
+      position: relative;
+      overflow: hidden;
+      padding: 15px 30px;
+      font-size: 40px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      transition: 0.2s;
+    }
+    span.ripple {
+      background-color: rgba(0, 190, 255, 0.7);
+      border-radius: 50%;
+      position: absolute;
+      transform: scale(0);
+      animation: ripple 0.5s linear forwards;
+    }
+
+    @keyframes ripple {
+      to {
+        transform: scale(1);
+        opacity: 0;
+      }
+    } */
+
+
+/* Ripple effect */
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+}
+.ripple:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+.ripple:active {
+  background-color: #6eb9f7 ;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+/* Button style */
+button {
+  border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: #2196f3;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+}
+
+  </style>
+  <body>
+    <div class="container">
+      <button class="r-btn ripple">Click Me</button>
+
+      <button class="r-btn ripple">Click Me</button>
+
+      <button class="r-btn ripple">Click Me</button>
+    </div>
+    <!-- <script>
+      var buttons = document.querySelectorAll(".r-btn");
+
+      Array.prototype.forEach.call(buttons, function (b) {
+        b.addEventListener("click", createRipple);
+      });
+
+      function createRipple(event) {
+        var ripple = document.createElement("span");
+        ripple.classList.add("ripple");
+
+        var max = Math.max(this.offsetWidth, this.offsetHeight);
+
+        ripple.style.width = ripple.style.height = max * 2 + "px";
+
+        var rect = this.getBoundingClientRect();
+
+        ripple.style.left = event.clientX - rect.left - max + "px";
+        ripple.style.top = event.clientY - rect.top - max + "px";
+
+        this.appendChild(ripple);
+      }
+    </script> -->
+  </body>
+</html>
