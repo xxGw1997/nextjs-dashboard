@@ -44,11 +44,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
 
-    React.useEffect(()=>{}, [])
+    // React.useEffect(()=>{}, [])
 
-    const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-      console.log(e.target);
-    };
+    // const handleClick = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+    //   console.log(e.target);
+    // };
 
     return (
       <Comp
@@ -57,7 +57,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           buttonVariants({ variant, size, className })
         )}
         ref={ref}
-        onClick={handleClick}
         {...props}
       />
     );
