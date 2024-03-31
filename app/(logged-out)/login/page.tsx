@@ -67,7 +67,7 @@ const LoginPage = () => {
                     <FormLabel>Email</FormLabel>
                     <FormControl>
                       <Input
-                        placeholder="please input email"
+                        placeholder="youremail@gmail.com"
                         type="email"
                         {...field}
                       />
