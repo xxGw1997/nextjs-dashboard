@@ -26,6 +26,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { PasswordInput } from "@/components/ui/password-input";
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -86,7 +87,7 @@ const LoginPage = () => {
                   <FormItem>
                     <FormLabel>Password</FormLabel>
                     <FormControl>
-                      <Input
+                      <PasswordInput
                         placeholder="please input password"
                         type="password"
                         {...field}
