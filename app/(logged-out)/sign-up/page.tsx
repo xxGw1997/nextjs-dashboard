@@ -231,7 +231,7 @@ const SignUpPage = () => {
                       <PopoverContent
                         align="start"
                         className="w-auto px-5 py-0 relative flex flex-col"
-                        onPointerDownOutside={(e) => e.preventDefault()}
+                        onPointerDownOutside={(e: MouseEvent) => e.preventDefault()}
                       >
                         <Calendar
                           mode="single"
